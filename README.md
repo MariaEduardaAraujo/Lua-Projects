@@ -1,2 +1,4 @@
 # Lua-Projects 💻🌙
-Estes projetos foram criados em Lua durante aulas que na escola, como forma de atividades e/ou provas. Sendo assim, podem não faz sentido completo, pois são apenas respostas de questões antigas.
+Este projeto foi desenvolvido com base no curso de Lua durante do canal Luaverse 🌕
+
+https://youtube.com/playlist?list=PLGVGJmkQU-wd64WNnMVI1Vy9dmpfHDzrH
