@@ -195,3 +195,5 @@ Ex:
     require("Arquivo") --> Nome do arquivo 
     print("Saída") --> O que quiser mostrar na tela
 ============================
+OBSERVAÇÃO -> ANOTAÇÕES CRIADAS COM BASE NOS MEUS ESTUDOS
+============================
