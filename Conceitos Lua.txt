@@ -1,0 +1,197 @@
+-- Números
+-- int - 1, 2, 3, 4, 10, 20
+-- float - 1.5, 2.6, 10.2
+-- double - 3.14159265
+
+Lua interpreta todos os típos de números como um só tipo.
+
+Ex:
+    PlayerLife = 100
+    PlayerAttackForce = 30
+    EnemyLife = 90
+    EnemyAttackForce = 20
+ ============================
+
+-- Variáveis Locais e Globais 
+Variável Global - uma variável que não precisam de declaração, com valor diferente de zero.
+Variável Local - use se sua variável tiver uma vida curta.
+
+Para excluir uma Variável Global basta atribuir nil à ela.
+
+Ex:
+    x = 10
+    print(b)  -> 10
+============================
+
+-- String
+Lua interpreta Strings tanto marcadas por aspas duplas ("String"), quanto por aspas simples ('String').
+
+Ex:
+    PlayerName = "Juan González"
+    EnemyName = 'Javier Perez'
+============================
+
+-- Operadores Aritiméticos
+-- soma - 1 + 1 = 2
+-- Subtração - 2 - 2 = 0
+-- Multiplicação - 3 * 3 = 9
+-- Divisão - 4 / 4 = 1
+
+Ex:
+    EnemyLife = EnemyLife - PlayerAttackForce
+============================
+
+-- Boolean 
+-- True (verdadeiro), False (falso) e Nil (nada)
+
+Lua usa nil como um tipo de não valor, para representar a ausência de um valor útil.
+
+Ex:
+    PlayerIsLife = true
+    PlayerIsLife = false
+    x = nil
+============================ 
+
+-- Operadores Relacionais e Lógicos
+    -- Operadores Relacionais
+        -- ==  Igual
+        -- >   Esquerda Maior
+        -- <   Direita Maior
+        -- >=  Esqurda Maior ou igual
+        -- ~=  Diferente
+    -- Operadores Lógicos
+        -- and  e
+        -- or   ou
+        -- not  não (inverte)
+
+Operadores sempre retornam valores em Booleano (verdadeiro e falso)
+
+Ex:
+    A = 2; B = 2
+    Resultado = (A == B)
+============================
+
+-- Estruturas de Controle
+    -- Estruturas Condicionais
+        -- if      se
+        -- else    se não
+        -- elseif  se não se
+
+Ex:
+    -- se semáforo == verde então:
+        -- Atravesse a rua
+    -- se não se semáforo == amarelo então:
+        -- Reduza a velocidade e siga com atenção 
+    -- se não
+    -- Cuidado, não atravesse a rua!
+    -- fim
+
+    TrafficLights = "green"
+
+    if TrafficLights == "green" then
+        print("Atravesse a rua")
+    elseif TrafficLights == "yellow" then
+        print("Reduza a velocidade e siga com atenção")
+    else
+        print("Cuidado, não atravesse a rua!")
+    end
+============================
+
+-- Estruturas de Controle Iteração (While)
+    -- Estruturas para Iteração
+        -- while   enquanto
+        
+While é um controle de fluxo que repete até que atinja a ordem de parada
+
+Ex:
+    -- enquanto n < 10 faça:
+        -- n = n + 1
+        -- print(n)
+
+    n = 0
+
+    while n < 10 do:
+        n = n + 1
+        print(n)
+    end
+============================
+
+-- Estruturas de Controle Iteração (For)
+    -- Estruturas para Iteração
+        -- for   para
+        
+For é um controle de fluxo que repete uma quantidade definida de vezes
+
+Ex:
+    for i = 1, 10, 1 do:
+        print(i)
+    end
+============================
+
+-- Funções
+-- Funções servem para reutilizar e organizar o código.
+-- Funções com parâmetros ajudam a deixar a função mais flexível.
+-- Funções podem retornar valores.
+
+Ex:
+    function MyMensage()
+        print("Olá")
+    end
+
+   function Sum(a, b)
+        c = a + b
+        return c
+    end
+
+D = Sum(12, 1)
+print(D)
+============================
+
+-- Tables - Array
+As tabelas são o principal mecanismo de estruturação de dados em Lua.
+
+Ex:
+    a = 5
+    MyArray = {"Juan", "Javier", "José"}
+    MyNumArray = {10, a, 10}
+
+    print(MyArray[2])
+    print(MyNumArray[2])
+============================
+ 
+-- Tables - List
+    -- table.unpack()  retorna todos os valores da lista
+    -- table.insert()  insere um novo valor na lista
+    -- table.remove()  remove um valor na lista
+    -- table.sort()    ordena os valores em ordem crescente
+
+Ex:
+    MyList = {2, 3, 5, 7, 11, 13}
+    print(table.unpack(MyList))
+============================
+
+-- Tables - Objetos
+Ex:
+    Terra Blade = {
+        damage = 115,
+        shotDistance = 250
+    }
+    Player = {
+        playerName = "Juan",
+        moveSpeed = 10,
+        jumpHeight = 1.5,
+        weapon = Terra Blade,
+    }
+    Enemy = {
+        enemyName = "Javier",
+        weapon = Terra Blade,
+    }
+============================
+
+-- Require
+    -- Parecido com o Import do Python
+
+Ex:
+    require("Arquivo") --> Nome do arquivo 
+    print("Saída") --> O que quiser mostrar na tela
+============================
