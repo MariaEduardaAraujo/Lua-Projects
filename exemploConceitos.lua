@@ -105,7 +105,7 @@ Enemy = {
 }
 --]]
 
---[[ "Jogo" para exemplificar os conceitos de Lua
+--[[ Conceitos de Lua exemplificados em forma de jogo
 PlayerName = "Juan González"
 PlayerLife = 100
 PlayerAttackForce = 30
