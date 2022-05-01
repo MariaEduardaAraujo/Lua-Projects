@@ -188,12 +188,34 @@ Ex:
     }
 ============================
 
--- Require
+-- Tables - Formas de Iteração
+Ex:
+    -- Iterando valores
+    for i=1, #table do
+    print(table[i])
+    end
+
+    -- Iterando valores com a função pairs
+    for index in pairs(table) do
+    print(table[index])
+    end
+
+    -- Iterando valores com a função ipairs
+    for key, value in ipairs(table) do
+    print(key, value)
+    end
+============================
+
+-- Módulo
+O módulo é como uma biblioteca que pode ser carregada usando require e tem um único nome global contendo uma tabela.
+
+Ex: A função require.
+============================
+
+-- Require - Módulo
     -- Parecido com o Import do Python
 
 Ex:
     require("Arquivo") --> Nome do arquivo 
     print("Saída") --> O que quiser mostrar na tela
-============================
-OBSERVAÇÃO -> ANOTAÇÕES CRIADAS COM BASE NOS MEUS ESTUDOS
 ============================
