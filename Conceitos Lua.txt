@@ -145,6 +145,19 @@ Ex:
 
 D = Sum(12, 1)
 print(D)
+
+-- Principais Funções
+   -- assert()    retorna se a comparação é verdadeira ou falsa, caso seja falsa o código quebra
+   -- type()      retorna o tipo do argumento que foi passado
+   -- tostring()  transforma qualquer argumento em String
+   -- tonumber()  transforma Strings em Numbers
+Ex:
+   Velocidade = 10
+   assert(Velocidade == 10)
+   
+   print(type(2))
+   print(tostring(5).."cinco")
+   print(tonumber("5.1"))
 ============================
 
 -- Tables - Array
