@@ -58,6 +58,22 @@ end
 
 D = Sum(12, 1)
 print(D)
+
+Velocidade = 10
+assert(Velocidade == 10)
+
+print(type(2))
+print(tostring(5).."cinco")
+print(tonumber("5.1"))
+--]]
+
+--[[ Tables
+Table = {"esta", "é", "uma", "table"}
+Table2 = {
+    key = "esta é"
+}
+Table2['key2'] = "uma outra"
+Table2.key3 = "table"
 --]]
 
 --[[ Array
