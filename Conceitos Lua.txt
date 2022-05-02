@@ -232,3 +232,53 @@ Ex:
     require("Arquivo") --> Nome do arquivo 
     print("Saída") --> O que quiser mostrar na tela
 ============================
+
+-- Manipulação de Strings
+    -- Função byte(s)   converte caracteres em representações numéricas.
+    -- Função char(s)   converte representações numéricas em caracteres.
+    -- Função find(s, "s")     localiza itens em uma determinada string.
+    -- Função gmatch(s, "%a")  retorna uma função iteradora que, cada vez que é chamada, retorna as próximas capturas do padrão sobre a string s.
+    -- Função gsub(s, "%d", 2) substitui caracteres da string e mostra a quantidade de vezes que foi substituido.
+    -- Função len(s)    retorna o comprimento de uma string.
+    -- Função lower(s)  retorna uma cópia da string com as letras maiúsculas convertidas em minúsculas.
+    -- Função upper(s)  retorna uma cópia da string com as letras minúsculas convertidas em maiúsculas.
+    -- Função match(s, %d)  faz buscas na string e quando encontrar a primeira ocorrência, ela retorna a função.
+    -- Função sub(s, 2, 3)  subtrai as partes da função com base em um índice que diz onde começar e onde parar.
+    -- Função rep(s, n) retorna a string s um número n de vezes.
+    -- Função reverse(s)    retorna a string ao contrário.
+
+Observações:
+    --> s = sua string
+    --> gmatch = ver exemplo para melhor entendimento (manipulacaoStrings.lua)
+    --> gsub = substituição
+    --> s, "Lua", "LUA" - forma de substituir palavras com gsub
+    --> sub = subtract - subtrair
+    --> rep(s, n, ",") retorna a string s um número n de vezes a partir de um separador.
+
+-- Padrões aceitos por Lua
+    -- x: (onde x não é um dos caracteres mágicos ^$()%.[]*+-?) representa o próprio caractere x.
+    -- .: (um ponto) representa todos os caracteres.
+    -- %a: representa todas as letras.
+    -- %c: representa todos os caracteres de controle.
+    -- %d: representa todos os dígitos.
+    -- %g: representa todos os caracteres que podem ser impressos exceto o espaço.
+    -- %l: representa todas as letras minúsculas.
+    -- %p: representa todos os caracteres de pontuação.
+    -- %s: representa todos os caracteres de espaço.
+    -- %u: representa todas as letras maiúsculas.
+    -- %w: representa todos os caracteres alfanuméricos.
+    -- %x: representa todos os dígitos hexadecimais.
+    -- %z: representa o caractere com representação 0.
+    -- %x: (onde x é qualquer caractere não-alfanumérico) representa o caractere x. -- A interação entre intervalos e classes não é definida. Assim, padrões como [%a-z] ou [a-%%] não possuem significado.
+    
+    -- [set]: representa a classe que é a união de todos os caracteres em set. Um intervalo de caracteres pode ser especificado separando os caracteres das extremidades do intervalo, em ordem ascendente, com um '-'. 
+       Todas as classes %x descritas acima também podem ser usadas como componentes em set. Todos os outros caracteres em set representam eles mesmos. Por exemplo, [%w_] (ou [_%w]) representa todos os caracteres alfanuméricos 
+       mais o sublinhado, [0-7] representa os dígitos octais, e [0-7%l%-] representa os dígitos octais mais as letras minúsculas mais o caractere '-'. A interação entre intervalos e classes não é definida. Assim, padrões como [%a-z] ou [a-%%] não possuem significado.
+    
+    -- [^set]: representa o complemento de set, onde set é interpretado como acima.
+    
+Observações:
+    -- Para todas as classes representadas por letras simples (%a, %c, etc.), a letra maiúscula correspondente representa o complemento da classe. Por exemplo, %S representa todos os caracteres que não são de espaço.
+    -- As definições de letra, espaço, e outros grupos de caracteres depende do idioma corrente. Em particular, a classe [a-z] pode não ser equivalente a %l.
+============================
+
