@@ -282,3 +282,19 @@ Observações:
     -- As definições de letra, espaço, e outros grupos de caracteres depende do idioma corrente. Em particular, a classe [a-z] pode não ser equivalente a %l.
 ============================
 
+-- Manipulação de Entradas e Saídas
+    -- .read()  lê o arquivo.
+    -- .write() escreve o valor dos argumentos para o arquivo de saída padrão.
+    -- .input() quando chamado com um nome de arquivo, ele abre o arquivo nomeado (no modo de texto) e define seu identificador como o arquivo de entrada padrão.
+    -- .open()
+    
+-- Modos de abertura:
+    -- **"r":**  modo de leitura (o padrão);
+    -- **"w":**  modo de escrita;
+    -- **"a":**  modo de adição;
+    -- **"r+":** modo de atualização, todos os dados anteriores são preservados;
+    -- **"w+":** modo de atualização, todos os dados anteriores são apagados;
+    -- **"a+":** modo de atualização de adição, todos os dados anteriores são preservados, a escrita somente é permitida no fim do arquivo.
+    
+    --> A cadeia mode também pode ter um 'b' no fim, que é necessário em alguns sistemas para abrir o arquivo em modo binário.  
+=============================
