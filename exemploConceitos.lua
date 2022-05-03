@@ -122,6 +122,71 @@ Enemy = {
 }
 --]]
 
+--[[ Manipulação de Strings
+String = require("string")
+
+S = "Hello World From Lua 1"
+
+print(string.byte(S))
+
+print(string.char(72))
+
+print(string.find(S, "l"))
+
+for palavra in string.gmatch(S, "%a+") do
+	print(palavra)
+end
+
+print(string.gsub(S, "%d", 5))
+
+print(string.gsub(S, "Lua", "LUA"))
+
+print(string.len(S))
+
+print(string.lower(S))
+
+print(string.upper(S))
+
+print(string.match(S, "%d"))
+
+print(string.sub(S, 4, 5))
+
+print(string.rep(S, 3, ","))
+
+print(string.reverse(S))
+--]]
+
+--[[ Manipulação de Entradas e Saídas
+local io = require("io")
+
+-- capturar inputs do usuário com a função read e write
+io.write("Digite o seu nome: ")
+NomeUser = io.read()
+io.write(NomeUser)
+
+-- abrir arquivos com a função input
+io.input("manipulacaoArquivos.txt")
+Arquivo = io.read()
+io.write(Arquivo)
+io.write(io.read())
+
+-- abrir arquivos com a função open, modo r
+Arquivo = io.open("manipulacaoArquivos.txt", "r")
+Arquivo = io.read()
+io.write(Arquivo)
+io.write(io.read())
+
+-- abrir arquivos com a função open, modo :read
+Arquivo = io.open("manipulacaoArquivos.txt", "r")
+print(Arquivo:read())
+
+-- abrir arquivos com a função open, modo w
+Arquivo = io.open("manipulacaoArquivos.txt", "a+")
+Arquivo:write("\nTeste2")
+Arquivo:flush()
+Arquivo:close()
+--]]
+
 --[[ Conceitos de Lua exemplificados em forma de jogo
 PlayerName = "Juan González"
 PlayerLife = 100
