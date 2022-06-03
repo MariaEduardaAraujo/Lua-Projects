@@ -160,6 +160,21 @@ Ex:
    print(tonumber("5.1"))
 ============================
 
+-- Funções - Como criar
+
+Ex:
+  -- f(x) = x + 1
+  function add1(x)
+    return x + 1
+  end
+print(add1(12))
+ 
+-- Progressão Aritmética
+    for i = 1, 10 do
+      print(add1(i))
+    end
+============================
+
 -- Tables - Array
 As tabelas são o principal mecanismo de estruturação de dados em Lua.
 
