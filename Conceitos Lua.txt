@@ -253,7 +253,7 @@ Ex:
     -- Função char(s)   converte representações numéricas em caracteres.
     -- Função find(s, "s")     localiza itens em uma determinada string.
     -- Função gmatch(s, "%a")  retorna uma função iteradora que, cada vez que é chamada, retorna as próximas capturas do padrão sobre a string s.
-    -- Função gsub(s, "%d", 2) substitui caracteres da string e mostra a quantidade de vezes que foi substituido.
+    -- Função gsub(s, "%d", 2) substitui caracteres da string e mostra a quantidade de vezes que foi substituído.
     -- Função len(s)    retorna o comprimento de uma string.
     -- Função lower(s)  retorna uma cópia da string com as letras maiúsculas convertidas em minúsculas.
     -- Função upper(s)  retorna uma cópia da string com as letras minúsculas convertidas em maiúsculas.
