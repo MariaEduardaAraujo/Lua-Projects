@@ -2,13 +2,13 @@
     -- Exibir mensagem de boas vindas
     -- Exibir uma mensagem solicitando o primeiro valor
     -- Receber e salvar o primeiro input do usuário 
-    -- Exbir uma mensagem solicitando a operação
+    -- Exibir uma mensagem solicitando a operação
     -- Receber e salvar a operação que o usuário deseja
-    -- Exbir uma mensagem solicitando o segundo valor
+    -- Exibir uma mensagem solicitando o segundo valor
     -- Receber e salvar o segundo input do usuário
     -- Executar a operação dado os valores
     -- Calcular a operação escolhida
-    -- Exbir o resultado para o usuário
+    -- Exibir o resultado para o usuário
 
 local io = require('io')
 function main()
