@@ -313,3 +313,9 @@ Observações:
     
     --> A cadeia mode também pode ter um 'b' no fim, que é necessário em alguns sistemas para abrir o arquivo em modo binário.  
 =============================
+
+-- Bubble Sort
+Algoritimo de bolha;
+    -- Algoritimo da ordem quadrática (n*n);
+    -- Lista com n elementos n*n
+============================
