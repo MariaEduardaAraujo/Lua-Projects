@@ -1,0 +1,85 @@
+-- Módulo
+O módulo é como uma biblioteca que pode ser carregada usando require e tem um único nome global contendo uma tabela.
+
+Ex: A função require.
+============================
+
+-- Require - Módulo
+    -- Parecido com o Import do Python
+
+Ex:
+    require("Arquivo") --> Nome do arquivo 
+    print("Saída") --> O que quiser mostrar na tela
+============================
+
+-- Manipulação de Strings
+    -- Função byte(s)   converte caracteres em representações numéricas.
+    -- Função char(s)   converte representações numéricas em caracteres.
+    -- Função find(s, "s")     localiza itens em uma determinada string.
+    -- Função gmatch(s, "%a")  retorna uma função iteradora que, cada vez que é chamada, retorna as próximas capturas do padrão sobre a string s.
+    -- Função gsub(s, "%d", 2) substitui caracteres da string e mostra a quantidade de vezes que foi substituído.
+    -- Função len(s)    retorna o comprimento de uma string.
+    -- Função lower(s)  retorna uma cópia da string com as letras maiúsculas convertidas em minúsculas.
+    -- Função upper(s)  retorna uma cópia da string com as letras minúsculas convertidas em maiúsculas.
+    -- Função match(s, %d)  faz buscas na string e quando encontrar a primeira ocorrência, ela retorna a função.
+    -- Função sub(s, 2, 3)  subtrai as partes da função com base em um índice que diz onde começar e onde parar.
+    -- Função rep(s, n) retorna a string s um número n de vezes.
+    -- Função reverse(s)    retorna a string ao contrário.
+
+Observações:
+    --> s = sua string
+    --> gmatch = ver exemplo para melhor entendimento (manipulacaoStrings.lua)
+    --> gsub = substituição
+    --> s, "Lua", "LUA" - forma de substituir palavras com gsub
+    --> sub = subtract - subtrair
+    --> rep(s, n, ",") retorna a string s um número n de vezes a partir de um separador.
+
+-- Padrões aceitos por Lua
+    -- x: (onde x não é um dos caracteres mágicos ^$()%.[]*+-?) representa o próprio caractere x.
+    -- .: (um ponto) representa todos os caracteres.
+    -- %a: representa todas as letras.
+    -- %c: representa todos os caracteres de controle.
+    -- %d: representa todos os dígitos.
+    -- %g: representa todos os caracteres que podem ser impressos exceto o espaço.
+    -- %l: representa todas as letras minúsculas.
+    -- %p: representa todos os caracteres de pontuação.
+    -- %s: representa todos os caracteres de espaço.
+    -- %u: representa todas as letras maiúsculas.
+    -- %w: representa todos os caracteres alfanuméricos.
+    -- %x: representa todos os dígitos hexadecimais.
+    -- %z: representa o caractere com representação 0.
+    -- %x: (onde x é qualquer caractere não-alfanumérico) representa o caractere x. -- A interação entre intervalos e classes não é definida. Assim, padrões como [%a-z] ou [a-%%] não possuem significado.
+    
+    -- [set]: representa a classe que é a união de todos os caracteres em set. Um intervalo de caracteres pode ser especificado separando os caracteres das extremidades do intervalo, em ordem ascendente, com um '-'. 
+       Todas as classes %x descritas acima também podem ser usadas como componentes em set. Todos os outros caracteres em set representam eles mesmos. Por exemplo, [%w_] (ou [_%w]) representa todos os caracteres alfanuméricos 
+       mais o sublinhado, [0-7] representa os dígitos octais, e [0-7%l%-] representa os dígitos octais mais as letras minúsculas mais o caractere '-'. A interação entre intervalos e classes não é definida. Assim, padrões como [%a-z] ou [a-%%] não possuem significado.
+    
+    -- [^set]: representa o complemento de set, onde set é interpretado como acima.
+    
+Observações:
+    -- Para todas as classes representadas por letras simples (%a, %c, etc.), a letra maiúscula correspondente representa o complemento da classe. Por exemplo, %S representa todos os caracteres que não são de espaço.
+    -- As definições de letra, espaço, e outros grupos de caracteres depende do idioma corrente. Em particular, a classe [a-z] pode não ser equivalente a %l.
+============================
+
+-- Manipulação de Entradas e Saídas
+    -- .read()  lê o arquivo.
+    -- .write() escreve o valor dos argumentos para o arquivo de saída padrão.
+    -- .input() quando chamado com um nome de arquivo, ele abre o arquivo nomeado (no modo de texto) e define seu identificador como o arquivo de entrada padrão.
+    -- .open()
+    
+-- Modos de abertura:
+    -- **"r":**  modo de leitura (o padrão);
+    -- **"w":**  modo de escrita;
+    -- **"a":**  modo de adição;
+    -- **"r+":** modo de atualização, todos os dados anteriores são preservados;
+    -- **"w+":** modo de atualização, todos os dados anteriores são apagados;
+    -- **"a+":** modo de atualização de adição, todos os dados anteriores são preservados, a escrita somente é permitida no fim do arquivo.
+    
+    --> A cadeia mode também pode ter um 'b' no fim, que é necessário em alguns sistemas para abrir o arquivo em modo binário.  
+=============================
+
+-- Bubble Sort
+Algoritimo de bolha;
+    -- Algoritimo da ordem quadrática (n*n);
+    -- Lista com n elementos n*n
+============================
