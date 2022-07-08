@@ -83,3 +83,50 @@ Algoritimo de bolha;
     -- Algoritimo da ordem quadrática (n*n);
     -- Lista com n elementos n*n
 ============================
+
+-- Biblioteca OS
+-- Método Execute:
+Método responsável por executar algum comando no Sistema Operacional. Útil em automatizações
+
+Ex:
+local os = require("os")
+
+-- Exibindo arquivos
+os.execute("dir")
+status, sinal, errorlog = os.execute("dir")
+print(status, errorlog) -- Exibindo possiveis erros e status
+
+-- Criando pastas e movendo arquivos
+nomePasta = "pasta"
+os.execute("mkdir"..nomePasta)
+os.execute("mv aaaa.txt"..nomePasta..'/aaaa.txt')
+
+-- Tratamento de datas:
+Ex:
+local os = require("os")
+
+-- Exibindo data
+print(os.date())
+
+-- Manipulando data
+print(os.date("Dia: %d do mês: %m do ano: %y"))
+
+-- Getenv:
+Ex:
+local os = require("os")
+
+varTeste = os.getenv('teste')
+print(varTeste) -- Retornando nil, pois essa variável só existe para fins didáticos
+
+-- Tmpname:
+Ex:
+local os = require("os")
+
+print(os.tmpname())
+
+-- Remove:
+Ex:
+local os = require("os")
+
+os.remove(./aaaa.txt)
+=============================
