@@ -130,3 +130,30 @@ local os = require("os")
 
 os.remove(./aaaa.txt)
 =============================
+
+-- Métodos:
+Função que pertence a um objeto.
+
+Ex:
+Character = {
+    Name = "",
+    Age = 0,
+    Height = 0
+}
+
+function myFunc(character) -- Função normal
+  character.Name = "Ronaldo"
+  character.Age = 20
+  character.Height = 1.55
+end
+
+function Character:myMethod() -- Método
+  self.Name = "Ronaldo"
+  self.Age = 20
+  self.Height = 1.55
+end
+
+-- myFunc(Character)
+Character:myMethod()
+print(Character.Name)
+=============================
