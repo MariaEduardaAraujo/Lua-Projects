@@ -132,7 +132,9 @@ os.remove(./aaaa.txt)
 =============================
 
 -- Métodos:
-Função que pertence a um objeto.
+-- Diferença entre FUNÇÃO e MÉTODO:
+    - Função é um pedaço de código que é chamado pelo nome. Ele pode receber dados para operar (ou seja, os parâmetros) e, opcionalmente, retornar dados (o valor de  retorno). Todos os dados que são passados para uma função são passados explicitamente. 
+    - Um método é um pedaço de código que é chamado por um nome associado a um objeto. Na maioria dos aspectos, é idêntico a uma função, exceto por: um método recebe implicitamente o objeto no qual foi chamado.
 
 Ex:
 Character = {
