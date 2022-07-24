@@ -1,4 +1,5 @@
 --[[ Conceitos de Lua exemplificados em forma de jogo
+
 PlayerName = "Juan González"
 PlayerLife = 100
 PlayerAttackForce = 30
@@ -78,4 +79,28 @@ Enemy = {
     enemyName = "Javier",
     weapon = Terra Blade,
 }
+
+--(Eventos)
+Player = {
+  onUsePowerUp
+}
+
+function PowerUpLife()
+  print("Vida Restaurada")
+end
+
+function PowerUpAttack()
+  print("Ataque mais forte")
+end
+
+function PowerUpDefense()
+  print("Escudo de Defesa")
+end
+
+-- Pegando PowerUps
+Player.onUsePowerUp = PowerUpLife
+Player.onUsePowerUp = PowerUpAttack
+
+-- Usando PowerUps
+Player.onUsePowerUp()
 --]]
