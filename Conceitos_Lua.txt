@@ -129,7 +129,8 @@ Ex:
 ============================
 
 -- Funções
--- Funções servem para reutilizar e organizar o código.
+-- Funções são um grupo de instruções que juntas executam uma tarefa.
+-- Servem para reutilizar e organizar o código.
 -- Funções com parâmetros ajudam a deixar a função mais flexível.
 -- Funções podem retornar valores.
 
