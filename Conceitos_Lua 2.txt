@@ -159,3 +159,30 @@ end
 Character:myMethod()
 print(Character.Name)
 =============================
+
+-- Eventos 
+
+Ex:
+Player = {
+  onUsePowerUp
+}
+
+function PowerUpLife()
+  print("Vida Restaurada")
+end
+
+function PowerUpAttack()
+  print("Ataque mais forte")
+end
+
+function PowerUpDefense()
+  print("Escudo de Defesa")
+end
+
+-- Pegando PowerUps
+Player.onUsePowerUp = PowerUpLife
+Player.onUsePowerUp = PowerUpAttack
+
+-- Usando PowerUps
+Player.onUsePowerUp()
+=============================
