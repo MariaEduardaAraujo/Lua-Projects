@@ -1,0 +1,106 @@
+--[[ Conceitos de Lua exemplificados em forma de jogo
+
+PlayerName = "Juan González"
+PlayerLife = 100
+PlayerAttackForce = 30
+
+EnemyName = 'Javier Perez'
+EnemyLife = 100
+EnemyAttackForce = 20
+
+print("O", PlayerName, "tem", PlayerLife, "de vida e", PlayerAttackForce, "de ataque!")
+print("E o", EnemyName, "tem", EnemyLife, "de vida e", EnemyAttackForce, "de ataque!")
+
+-- (Operadores Aritiméticos) Atacar o inimigo
+print("\n")
+
+EnemyLife = EnemyLife - PlayerAttackForce
+
+print("Após este ataque, o", EnemyName, "tem", EnemyLife, "de vida")
+
+-- (Boolean) Cair de um penhasco 
+PlayerIsLife = true
+PlayerLife = 100
+  -- queda
+PlayerIsLife = false
+PlayerLife = 0 
+
+-- (Operadores Lógicos e Relacionais) Checar se o Player está vivo
+PlayerLife = 100
+PlayerIsAlive = PlayerLife > 0
+
+-- (Estruturas de Controle) Checar nome do player
+PlayerName = "Juan"
+DatabasePlayerName = "Juan"
+
+if PlayerName == DatabasePlayerName then
+    print("Login realizado com sucesso")
+else
+    print("Usuário incorreto")
+end
+
+-- (Funções) Implementação de funções de PowerUps
+PlayerVelocity = 5
+PlayerJumpHeight = 1
+
+function PowerUp(currentVelocity, currentJumpHeight, force)
+    currentVelocity = currentVelocity * force
+    currentJumpHeight = currentJumpHeight * force
+    return currentVelocity, currentJumpHeight
+end
+
+PlayerVelocity, PlayerJumpHeight = PowerUp(PlayerVelocity, PlayerJumpHeight, 2)
+
+print(PlayerVelocity)
+print(PlayerJumpHeight)
+
+-- (Array) Array de Players
+PlayerSelected = 4
+PlayersName = {"Juan", "José", "Miguel", "Rafael"}
+
+function SpawnPlayer(players, index)
+    print(players[index], "spawnerd")
+end
+
+SpawnPlayer(PlayersName, PlayerSelected)
+
+-- (Objeto)
+Terra Blade = {
+    damage = 115,
+    shotDistance = 250
+}
+Player = {
+    playerName = "Juan",
+    moveSpeed = 10,
+    jumpHeight = 1.5,
+    weapon = Terra Blade,
+}
+Enemy = {
+    enemyName = "Javier",
+    weapon = Terra Blade,
+}
+
+--(Eventos)
+Player = {
+  onUsePowerUp
+}
+
+function PowerUpLife()
+  print("Vida Restaurada")
+end
+
+function PowerUpAttack()
+  print("Ataque mais forte")
+end
+
+function PowerUpDefense()
+  print("Escudo de Defesa")
+end
+
+-- Pegando PowerUps
+Player.onUsePowerUp = PowerUpLife
+Player.onUsePowerUp = PowerUpAttack
+
+-- Usando PowerUps
+Player.onUsePowerUp()
+--]]
