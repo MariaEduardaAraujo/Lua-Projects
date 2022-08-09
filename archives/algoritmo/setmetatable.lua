@@ -11,20 +11,20 @@ B = {
   e = 5
 }
 
-C = setmetatable(A, {__index = B})
+C = setmetatable(A, {__index=B})
 print(C.b)
 
 Ex2:
 Character = {}
 
 function Character:Andar()
-  print("anda")
+  print("Andando")
 end
 function Character:Correr()
-  print("corre")
+  print("Correndo")
 end
 function Character:Pular()
-  print("pula")
+  print("Pulando")
 end
 
 -----------------------------------
@@ -32,25 +32,30 @@ end
 CharacterSolder = {}
 
 function CharacterSolder:Atacar()
-  print("Ataca")
+  print("Atacando")
 end
 
-CharacterSolder = setmetatable(CharacterSolder, {__index = Character})
-
-CharacterSolder:Atacar()
+CharacterSolder = setmetatable(CharacterSolder, { __index=Character })
 
 -----------------------------------
 
 Enemy = {}
 
 function Enemy:PerseguirJogador()
-  print("persegue")
+  print("Perseguindo")
 end
+
+Enemy = setmetatable(Enemy, { __index=CharacterSolder })
 
 -----------------------------------
 
 Player = {}
 
 function Player:SerControlado()
-  print("sendo controlado")
+  print("Sendo controlado")
 end
+
+Player = setmetatable(Player, { __index=CharacterSolder })
+
+Player:SerControlado()
+Player:Andar()
