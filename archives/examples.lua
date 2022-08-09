@@ -1,5 +1,3 @@
--- "Algoritimo em forma de jogo para melhor visualização dos conceitos aprendidos em LUA."
-
 --[[ Print em Lua
 print("Hello, world!")
 --]]
