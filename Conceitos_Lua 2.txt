@@ -188,6 +188,8 @@ Player.onUsePowerUp()
 =============================
 
 -- Setmetatable
+Metatables permitem alterar o comportamento de uma table. 
+Cada table em Lua pode ter sua própria metatable.
 
 Ex: 
 A = {
@@ -202,4 +204,25 @@ B = {
 
 C = setmetatable(A, {__index=B})
 print(C.b)
+=============================
+
+-- Getmetatable
+Usado para pegar a tabela meta
+
+Ex:
+A = {
+  a = 1,
+  b = 2,
+  c = 3
+}  
+
+A.__index = A
+
+B = {
+  d = 4,
+  e = 5
+}
+C = setmetatable(B, A)
+
+print(getmetatable(C).a)
 =============================
