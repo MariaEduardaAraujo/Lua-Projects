@@ -226,3 +226,21 @@ C = setmetatable(B, A)
 
 print(getmetatable(C).a)
 =============================
+
+-- __index
+Serve para fazer alguma ação ou retornar algum valor, caso o valor procurado não exista na tabela.
+
+Ex:
+A = {
+  a = 1,
+  b = 2,
+  c = 3
+}
+B = setmetatable(A, {
+  __index = function (t, key)
+    print(t,"não tem a chave", key)
+  end
+})
+
+print(A.f)
+=============================
