@@ -244,3 +244,91 @@ B = setmetatable(A, {
 
 print(A.f)
 =============================
+
+-- Como percorrer uma lista em Lua
+A linguagem Lua não possui uma estrutura de dados de lista propriamente dita, entretanto, possui Tables e Hash tables.
+
+OBS: Tables são uma estrutura que serve para definir objetos e quando usada como lista, torna-se um array associativo, que é um array que pode ser indexado não apenas por números, mas também por cadeias (sequências de caracteres) ou por qualquer outro valor da linguagem, exceto nil.
+
+--[[
+Ex for e ipairs:
+local lista = {5, 2, 3, 4, 1}
+
+for i=1, #lista do
+    print(lista[i])
+end
+
+for index, value in ipairs(lista) do
+    print(index..":"..value)
+end
+--]]
+
+--[[
+Ex while e repeat:
+local contador = 0
+
+while contador <= 10 do
+    print(contador)
+    contador = contador+1
+end
+
+local contador = 0
+repeat
+    print(contador)
+    contador = contador+1
+until contador >= 10
+
+local contador = 0
+while contador <= 10 do
+    if (contador % 2 == 0) then
+        print("Contador é um número par")
+    end
+    contador = contador+1
+    print(contador)
+end
+--]]
+
+--[[
+Ex function:
+local contador = 0
+
+function numero_impar(number)
+    if (contador % 2 == 1) then
+        print("Contador é um número ímpar")
+    end
+end
+function numero_par(number)
+    if (contador % 2 == 0) then
+        print("Contador é um número par")
+    end
+end
+
+while contador <=10 do
+    print(contador)
+    numero_impar(contador)
+    numero_par(contador)
+    contador = contador+1
+
+end
+--]]
+
+--[[
+Ex continue:
+local contador = 0
+
+function numero_par(number)
+    if (contador % 2 == 0) then
+        print("Contador é um número par")
+    end
+end
+
+while contador <= 10 do
+    if(contador == 5)then
+    else
+        print(contador)
+        numero_par(contador)
+    end
+    contador = contador+1
+end
+--]]
+=============================
